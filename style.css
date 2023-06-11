@@ -3,6 +3,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  color: black;
 }
 
 header {
@@ -15,8 +17,6 @@ header .open-btn {
   cursor: pointer;
 }
 header .logo {
-  color: black;
-  text-decoration: none;
   position: absolute;
   left: 0;
   top: 0;
@@ -139,11 +139,17 @@ footer img {
   header {
     display: block;
   }
+  header .logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-left: 2.5em;
+  }
   header .menu {
     display: flex;
     justify-content: space-between;
     width: 80%;
-    margin: 2.5em auto;
+    margin: 2.6em auto;
   }
   header .nav-menu {
     display: flex;
@@ -153,7 +159,6 @@ footer img {
     display: flex;
   }
   .wrapper {
-    margin: 10em;
     transition: 0.5s ease-in-out;
   }
   .wrapper .hero {
@@ -161,15 +166,36 @@ footer img {
     flex-direction: row-reverse;
   }
   .wrapper .hero .hero-img-container {
-    width: 500px;
-    height: 300px;
-    overflow: hidden;
+    width: 100%;
   }
   .wrapper .hero .hero-img-container .hero-img {
-    height: 100%;
-    width: 100%;
-    -o-object-fit: scale-down;
-       object-fit: scale-down;
     background: url("./images/image-hero-desktop.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 75vh;
+    width: 100%;
+  }
+  .wrapper .hero .hero-details {
+    margin: 10em;
+    text-align: left;
+  }
+  .wrapper .hero .hero-details h1 {
+    font-size: 5rem;
+    padding-right: 1.5em;
+    line-height: 4.5rem;
+    font-weight: 600;
+  }
+  .wrapper .hero .hero-details p {
+    font-size: 1.5rem;
+  }
+  .wrapper .hero footer {
+    display: block;
+    justify-content: left;
+  }
+  .wrapper .hero footer img {
+    -o-object-fit: contain;
+       object-fit: contain;
+    height: 40px;
+    width: 80px;
   }
 }/*# sourceMappingURL=style.css.map */
